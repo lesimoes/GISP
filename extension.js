@@ -20,7 +20,7 @@
 
 const GETTEXT_DOMAIN = 'my-indicator-extension';
 
-const { GObject, St } = imports.gi;
+const { GObject, St, Clutter } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
@@ -54,15 +54,39 @@ const Indicator = GObject.registerClass(
   }
 );
 
+const ButtonNew = GObject.registerClass(
+  class ButtonNew extends PanelMenu.Button {
+    _init() {
+      super._init(0.0, _('TESTE'));
+
+      let button = new St.bin({
+        style_class: 'panel-button',
+      });
+
+      log('=======================================', button);
+      button.set_child(
+        new St.Label({
+          text: 'Oiii',
+          y_align: Clutter.ActorAlign.CENTER,
+        })
+      );
+
+      Main.panel_rightBox.insert_child_at(button, 0);
+    }
+  }
+);
+
 class Extension {
   constructor(uuid) {
     this._uuid = uuid;
-
+    log('INIT');
     ExtensionUtils.initTranslations(GETTEXT_DOMAIN);
   }
 
   enable() {
     this._indicator = new Indicator();
+    log('ENABLE');
+    //this._button = new ButtonNew();
     Main.panel.addToStatusArea(this._uuid, this._indicator);
   }
 
