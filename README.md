@@ -27,7 +27,7 @@ Warning: This is a initial version maybe there are some bugs.
 ### Screens
 
 
-<img src="https://raw.githubusercontent.com/lesimoes/GISP/main/screens/screen01.png" alt="example" width="60%"/>
+<img src="https://github.com/lesimoes/GISP/blob/main/screens/screen02.png?raw=true" alt="example" width="60%"/>
 
 ### Dependencies
 
