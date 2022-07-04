@@ -13,11 +13,11 @@ module.exports = {
           ]);
 
           child.stdout.on('data', function (data) {
-            process.stdout.write(data);
+            process.stdout.write(`LOG: ${data}`);
           });
 
-          child.stderr.on('data', function (err) {
-            process.stdout.write(err);
+          child.stderr.on('data', function (data) {
+            process.stdout.write(`LOG: ${data}`);
           });
         });
       },

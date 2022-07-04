@@ -1,6 +1,6 @@
 {
   "name": "lesimoes",
-  "description": "hello_world",
+  "description": "a simple starter pack for gnome-extensions with js",
   "uuid": "lesimoes@gmail.com",
   "shell-version": [
     "42"

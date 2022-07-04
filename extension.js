@@ -46,8 +46,8 @@ const Indicator = GObject.registerClass(
 
       let item = new PopupMenu.PopupMenuItem(_('Show Notification'));
       item.connect('activate', () => {
-        Main.notify(_('Whats up, folks?'));
-        log('================= LELE ===================', uuid);
+        Main.notify(_('Whats up, lele?'));
+        log('===== Nice log message =====');
       });
       this.menu.addMenuItem(item);
     }
@@ -73,6 +73,5 @@ class Extension {
 }
 
 function init(meta) {
-  log('Novsso', uuid);
   return new Extension(uuid);
 }

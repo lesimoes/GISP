@@ -4,7 +4,7 @@
   "description": "",
   "main": "extension.js",
   "scripts": {
-    "install": "./install.sh",
+    "install": "./scripts/install.sh",
     "watch": "webpack --watch"
   },
   "author": "",
