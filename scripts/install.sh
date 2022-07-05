@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gnome-extensions pack ./ -o ./dist
+gnome-extensions pack ./ -o ./dist --force
