@@ -11,6 +11,7 @@ module.exports = {
             '--',
             'gnome-shell',
             '--nested',
+            'wayland',
           ]);
 
           child.stderr.on('data', function (data) {
