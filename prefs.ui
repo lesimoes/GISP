@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwPreferencesPage" id="my_page">
+    <property name="name">my-page</property>
+    <property name="title" translatable="yes">My Page</property>
+    <property name="icon-name">folder-symbolic</property>
+    <child>
+      <object class="AdwPreferencesGroup" id="my_group">
+        <child>
+          <object class="AdwActionRow" id="my_row">
+            <property name="title" translatable="yes">Show</property>
+            <property name="activatable-widget">my_switch</property>
+            <child>
+              <object class="GtkEntry" id="my_switch">
+                <property name="valign">center</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
